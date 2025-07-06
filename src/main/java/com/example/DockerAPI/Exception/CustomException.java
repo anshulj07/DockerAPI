@@ -11,5 +11,4 @@ public class CustomException extends RuntimeException{
     public HttpStatus getStatus() {
         return status;
     }
-
 }

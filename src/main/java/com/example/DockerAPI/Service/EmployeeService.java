@@ -23,7 +23,11 @@ public class EmployeeService {
     }
 
     public List<Employee> getAllEmployee() {
-        return employeeRepository.findAll();
+        List<Employee> eList = employeeRepository.findAll();
+        if(eList.size() == 0){
+            throw new CustomException("No Employee present", HttpStatus.NOT_IMPLEMENTED);
+        }
+        return eList;
     }
 
     public void deleteEmployee(int id) {
