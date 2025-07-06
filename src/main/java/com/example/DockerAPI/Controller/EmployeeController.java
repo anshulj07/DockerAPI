@@ -37,7 +37,7 @@ public class EmployeeController {
         return employeeService.getAllEmployee();
     }
 
-    @GetMapping("/n")
+    @GetMapping("/getEmployeeByName")
     public Employee getEmployeeByName(@RequestParam String name){
         return employeeService.getEmployeeByName(name);
     }
