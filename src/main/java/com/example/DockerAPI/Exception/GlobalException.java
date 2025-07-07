@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
-public class GlobalExceptionHandler {
+public class GlobalException {
     @ExceptionHandler(CustomException.class)
-    public ResponseEntity<String> handleGenericException(CustomException e){
+    public ResponseEntity<String> GlobalExceptionHandler(CustomException e){
         return new ResponseEntity<>(e.getMessage(), e.getStatus());
     }
 }
